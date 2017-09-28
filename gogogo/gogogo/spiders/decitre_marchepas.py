@@ -20,7 +20,7 @@ IMAGEA = './/*[@id=\'auteur\']/div[2]/img/@src'
 THEMES = './/div[3]/div[5]/div/ul/descendant::*/text()'
 
 
-fiJdid = '/home/mostafa31/pachich/gogogo/tst.xlsx'
+fiJdid = '/path/to/file.xlsx'
 xlsx_workbook = load_workbook(filename = fiJdid, read_only = True,   use_iterators = True).active
 row = 1
 urls = []
@@ -37,7 +37,7 @@ class DecitreSpider(scrapy.Spider):
     start_urls = urls
     eanCode = eanCode
     def lireConf(self):
-        with open('/home/mostafa31/pachich/gogogo/gogogo/config.json', 'r') as f:
+        with open('/path/to/config.json', 'r') as f:
             config = json.load(f)
             return config
     def lireExcel(self):
