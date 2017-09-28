@@ -19,8 +19,7 @@ IMAGEL = './/div[1]/div[3]/div[2]/div[1]/div[1]/a/img/@src'
 IMAGEA = './/*[@id=\'auteur\']/div[2]/img/@src'
 THEMES = './/div[3]/div[5]/div/ul/descendant::*/text()'
 
-fiJdid = '/home/mostafa31/pachich/gogogo/tst.xlsx'
-#fiJdid = '/media/bachir/09e33d62-1bce-4384-9269-31f2edd616b0/apps/gogogo/fichiersExcel/castors/ean.xlsx'
+fiJdid = '/path/to/file.xlsx'
 xlsx_workbook = load_workbook(filename = fiJdid, read_only = True,   use_iterators = True).active
 row = 1
 mapping  = []
@@ -34,7 +33,7 @@ class DecitreSpider(scrapy.Spider):
     allowed_domains = ['www.decitre.fr']
     mapping=mapping
     def lireConf(self):
-        with open('/media/bachir/09e33d62-1bce-4384-9269-31f2edd616b0/apps/gogogo/config.json', 'r') as f:
+        with open('/path/to/config.json', 'r') as f:
             config = json.load(f)
             return config
 			
