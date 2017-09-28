@@ -1,0 +1,5 @@
+Usage
+=====
+  scrapy crawl [options] <spider>
+
+crawl: error: Unrecognized output format 'json', set one using the '-t' switch or as a file extension from the supported list ('csv',)
